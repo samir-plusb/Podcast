@@ -2,7 +2,7 @@
 <f:if condition="{episode.file}">
 			<item>
 				<title><f:format.html parseFuncTSPath="plugin.tx_podcast.feedparser">{episode.title}</f:format.html></title>
-				<f:if condition="{itunes}">
+				<f:if condition="{podcast.itunes}">
 					<f:then>       
 				<f:if condition="{podcast.itunesblock}"> 
 					<f:then><itunes:block>yes</itunes:block></f:then>
