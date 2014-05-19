@@ -520,5 +520,12 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	public function setKeywords(Tx_Extbase_Persistence_ObjectStorage $keywords) {
 		$this->keywords = $keywords;
 	}
+        
+        public function getFilesize(){
+          if(is_file($this->file)){
+            return filesize($this->file); 
+          }
+          return 0;
+        }
 }
 ?>
