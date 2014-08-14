@@ -87,7 +87,7 @@ class Tx_Podcast_Controller_PodcastController extends Tx_Extbase_MVC_Controller_
 			$this->view->assign('language', $lang ? $lang : $GLOBALS['TSFE']->config['config']['htmlTag_langKey']);
 		}
 
-
+        $this->view->assign('baseUrl', $this->controllerContext->getRequest()->getBaseURI());
 		$this->view->assign('settings', $this->settings);
 		$this->view->assign('podcast', $podcast);
 	}
