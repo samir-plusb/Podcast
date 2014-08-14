@@ -77,7 +77,7 @@ class Tx_Podcast_Domain_Model_Podcast extends Tx_Extbase_DomainObject_AbstractEn
 	/**
 	 * Contains explicit Content
 	 *
-	 * @var boolean
+	 * @var string
 	 */
 	protected $explicit;  
 	
@@ -270,7 +270,7 @@ class Tx_Podcast_Domain_Model_Podcast extends Tx_Extbase_DomainObject_AbstractEn
 	/**
 	 * Returns the explicit
 	 *
-	 * @return boolean $explicit
+	 * @return string $explicit
 	 */
 	public function getExplicit() {
 		return $this->explicit;
@@ -279,7 +279,7 @@ class Tx_Podcast_Domain_Model_Podcast extends Tx_Extbase_DomainObject_AbstractEn
 	/**
 	 * Sets the explicit
 	 *
-	 * @param boolean $explicit
+	 * @param string $explicit
 	 * @return void
 	 */
 	public function setExplicit($explicit) {
