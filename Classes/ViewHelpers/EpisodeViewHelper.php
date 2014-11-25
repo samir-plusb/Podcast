@@ -1,4 +1,5 @@
 <?php
+namespace PlusB\Podcast\ViewHelpers;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Fluid".                      *
@@ -19,6 +20,7 @@
  *                                                                        *
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
+use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Calculates Episode
@@ -27,7 +29,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  * @api
  */               
-class Tx_Podcast_ViewHelpers_EpisodeViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class EpisodeViewHelper extends AbstractViewHelper {
 
 	/**
 	 * Iterates through elements of $each and renders child nodes

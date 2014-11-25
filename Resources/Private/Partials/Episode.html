@@ -1,10 +1,10 @@
-{namespace pc=Tx_Podcast_ViewHelpers}
 <div class="episode {zebraClass}">
 	<div class="description">
 		<h3>{episode.title}<span><f:format.date date="{episode.publicationDate}" format="{settings.episode.fe.publicationDate}" /></span></h3>
+                <p>{episode.subtitle}</p>
 		<f:format.html><f:format.nl2br>{episode.description}</f:format.nl2br></f:format.html>
 	</div>
-	<pc:if condition="'{episode.mime}'=='video/mp4'">
+	<f:if condition="{0:episode.mime}=={0:'video/mp4'}">
 		<f:then>        
 			<div class="video">
 				<video width="{settings.video.width}" height="{settings.video.height}" id="podcastvideo_{episode.uid}" 
@@ -36,5 +36,5 @@
 				</audio>
 			</div>
 		</f:else>
-	</pc:if>
+	</f:if>
 </div>

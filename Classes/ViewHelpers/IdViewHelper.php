@@ -1,4 +1,5 @@
 <?php
+namespace PlusB\Podcast\ViewHelpers;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Fluid".                      *
@@ -19,7 +20,9 @@
  *                                                                        *
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
-class Tx_Podcast_ViewHelpers_IdViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+
+class IdViewHelper extends AbstractViewHelper {
 
     /**
      * Renders a lower cased underscore id from a given text
