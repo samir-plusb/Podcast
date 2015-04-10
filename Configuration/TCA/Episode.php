@@ -29,7 +29,7 @@ $TCA['tx_podcast_domain_model_episode'] = array(
 				)
 			)
 		),
-		'l18n_parent' => array(
+		'l10n_parent' => array(
 			'displayCond' => 'FIELD:sys_language_uid:>:0',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.php:LGL.l18n_parent',
@@ -39,10 +39,10 @@ $TCA['tx_podcast_domain_model_episode'] = array(
 					array('', 0),
 				),
 				'foreign_table' => 'tx_podcast_domain_model_episode',
-				'foreign_table_where' => 'AND tx_podcast_domain_model_episode.uid=###REC_FIELD_l18n_parent### AND tx_podcast_domain_model_episode.sys_language_uid IN (-1,0)',
+				'foreign_table_where' => 'AND tx_podcast_domain_model_episode.uid=###REC_FIELD_l10n_parent### AND tx_podcast_domain_model_episode.sys_language_uid IN (-1,0)',
 			)
 		),
-		'l18n_diffsource' => array(
+		'l10n_diffsource' => array(
 			'config'=>array(
 				'type'=>'passthrough')
 		),
