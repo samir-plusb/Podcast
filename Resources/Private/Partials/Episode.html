@@ -1,40 +1,55 @@
 <div class="episode {zebraClass}">
-	<div class="description">
+
+    <f:if condition="{episode.teaserimage}">
+        <f:then>
+            <div class="teaserimage">
+                <f:image src="uploads/tx_podcast/{episode.teaserimage}" alt="episode.title" width="100c" height="150c" />
+            </div>
+        </f:then>
+    </f:if>
+        <div class="description">
 		<h3>{episode.title}<span><f:format.date date="{episode.publicationDate}" format="{settings.episode.fe.publicationDate}" /></span></h3>
                 <p>{episode.subtitle}</p>
-		<f:format.html><f:format.nl2br>{episode.description}</f:format.nl2br></f:format.html>
-	</div>
-	<f:if condition="{0:episode.mime}=={0:'video/mp4'}">
-		<f:then>        
-			<div class="video">
-				<video width="{settings.video.width}" height="{settings.video.height}" id="podcastvideo_{episode.uid}" 
-					preload="{settings.video.preload}" controls="controls" <f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.video.width}' height:'{settings.video.height}c')}"</f:if>>
-					<f:for each="{episode.altfiles}" as="altfile">
-					<source src="{altfile.name}" type='{altfile.mime}' />
-					</f:for>
-					<!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-					<object width="{settings.video.width}" height="{settings.video.height}" type="application/x-shockwave-flash" data="flashmediaelement.swf">
-						<param name="flashvars" value="controls=true&file={episode.altfiles.0.name}" />
-						<param name="movie" value="/typo3conf/ext/podcast/Resources/Public/mediaelementplayer/flashmediaelement.swf" />
-						<f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.video.width}' height:'{settings.video.height}c')}"</f:if>
-					</object>
-				</video>
-			</div>
-		</f:then>
-		<f:else>      
-			<div class="audio">
-				<audio controls="controls" preload="{settings.audio.preload}" data-width="{settings.audio.width}" data-height="{settings.audio.height}">
-					<f:for each="{episode.altfiles}" as="altfile">
-					<source src="{altfile.name}" type='{altfile.mime}'/>
-					</f:for>
-					<!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-					<object width="{settings.audio.width}" height="{settings.audio.height}" type="application/x-shockwave-flash" data="flashmediaelement.swf">
-						<param name="flashvars" value="controls=true&file={episode.altfiles.0.name}" />
-						<param name="movie" value="/typo3conf/ext/podcast/Resources/Public/mediaelementplayer/flashmediaelement.swf" />
-						<f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.audio.width}' height:'{settings.audio.height}c')}"</f:if>
-					</object>
-				</audio>
-			</div>
-		</f:else>
-	</f:if>
+		        <!-- <f:format.html><f:format.nl2br>{episode.description}</f:format.nl2br></f:format.html> -->
+                <f:if condition="{episode.linkdetail}">
+                    <f:then>
+                        <div class="linkdetail">
+                            <f:link.external uri="{episode.linkdetail}" target="_self"><f:translate key="tx_podcast_domain_model_episode.link_detail"/></f:link.external>
+                        </div>
+                    </f:then>
+                </f:if>
+	    </div>
+    <f:if condition="{0:episode.mime}=={0:'video/mp4'}">
+        <f:then>
+            <div class="video">
+                <video width="{settings.video.width}" height="{settings.video.height}" id="podcastvideo_{episode.uid}"
+                       preload="{settings.video.preload}" controls="controls" <f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.video.width}' height:'{settings.video.height}c')}"</f:if>>
+                <f:for each="{episode.altfiles}" as="altfile">
+                    <source src="{altfile.name}" type='{altfile.mime}' />
+                </f:for>
+                <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+                <object width="{settings.video.width}" height="{settings.video.height}" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+                    <param name="flashvars" value="controls=true&file={episode.altfiles.0.name}" />
+                    <param name="movie" value="/typo3conf/ext/podcast/Resources/Public/mediaelementplayer/flashmediaelement.swf" />
+                    <f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.video.width}' height:'{settings.video.height}c')}"</f:if>
+                </object>
+                </video>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="audio">
+                <audio controls="controls" preload="{settings.audio.preload}" data-width="{settings.audio.width}" data-height="{settings.audio.height}">
+                    <f:for each="{episode.altfiles}" as="altfile">
+                        <source src="{altfile.name}" type='{altfile.mime}'/>
+                    </f:for>
+                    <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+                    <object width="{settings.audio.width}" height="{settings.audio.height}" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+                        <param name="flashvars" value="controls=true&file={episode.altfiles.0.name}" />
+                        <param name="movie" value="/typo3conf/ext/podcast/Resources/Public/mediaelementplayer/flashmediaelement.swf" />
+                        <f:if condition="{episode.image}">poster="{f:uri.image(src:'uploads/tx_podcast/{episode.image}', width:'{settings.audio.width}' height:'{settings.audio.height}c')}"</f:if>
+                    </object>
+                </audio>
+            </div>
+        </f:else>
+    </f:if>
 </div>

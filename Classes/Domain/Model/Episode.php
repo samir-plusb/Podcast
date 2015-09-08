@@ -67,13 +67,27 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	 * @validate NotEmpty
 	 */
 	protected $file;
-	
-	/**
-	 * Image
-	 *
-	 * @var string
-	 */
-	protected $image;
+
+    /**
+     * Image
+     *
+     * @var string
+     */
+    protected $image;
+
+    /**
+     * Teaser Image
+     *
+     * @var string
+     */
+    protected $teaserimage;
+
+    /**
+     * Link to detail page
+     *
+     * @var string
+     */
+    protected $linkdetail;
 
 	/**
 	 * Publication Date
@@ -262,25 +276,63 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	public function setFile($file) {
 		$this->file = $file;
 	}
-	
-	/**
-	 * Returns the image
-	 *
-	 * @return string $image
-	 */
-	public function getImage() {
-		return $this->image;
-	}
 
-	/**
-	 * Sets the image
-	 *
-	 * @param string $image
-	 * @return void
-	 */
-	public function setImage($image) {
-		$this->image = $image;
-	}
+    /**
+     * Returns the image
+     *
+     * @return string $image
+     */
+    public function getImage() {
+        return $this->image;
+    }
+
+    /**
+     * Sets the image
+     *
+     * @param string $image
+     * @return void
+     */
+    public function setImage($image) {
+        $this->image = $image;
+    }
+
+    /**
+     * Returns the teaserimage
+     *
+     * @return string $teaserimage
+     */
+    public function getTeaserimage() {
+        return $this->teaserimage;
+    }
+
+    /**
+     * Sets the teaserimage
+     *
+     * @param string $teaserimage
+     * @return void
+     */
+    public function setTeaserimage($teaserimage) {
+        $this->teaserimage = $teaserimage;
+    }
+
+    /**
+     * Returns the linkdetail
+     *
+     * @return string $linkdetail
+     */
+    public function getLinkdetail() {
+        return $this->linkdetail;
+    }
+
+    /**
+     * Sets the linkdetail
+     *
+     * @param string $linkdetail
+     * @return void
+     */
+    public function setLinkdetail($linkdetail) {
+        $this->linkdetail = $linkdetail;
+    }
 
 	/**
 	 * Returns the publicationDate

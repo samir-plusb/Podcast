@@ -29,22 +29,30 @@
 						<onChange>reload</onChange>
 					</TCEforms>
 					</switchableControllerActions>
-					<settings.singlePodcast>
-						<TCEforms>
-							<label>Podcast to display</label>
-							<displayCond><![CDATA[FIELD:switchableControllerActions:=:Podcast->show;Podcast->list;]]></displayCond>
-							<config type="array">
-								<type>select</type>
-								<size>1</size>
-								<minitems>0</minitems>
-								<maxitems>1</maxitems>
-								<autoSizeMax>1</autoSizeMax>
-								<foreign_table>tx_podcast_domain_model_podcast</foreign_table>
-								<foreign_table_where> AND tx_podcast_domain_model_podcast.deleted=0 AND tx_podcast_domain_model_podcast.sys_language_uid IN (-1,0)</foreign_table_where>
-								<show_thumbs>1</show_thumbs>
-							</config>
-						</TCEforms>
-					</settings.singlePodcast>
+                    <settings.singlePodcast>
+                        <TCEforms>
+                            <label>Podcast to display</label>
+                            <displayCond><![CDATA[FIELD:switchableControllerActions:=:Podcast->show;Podcast->list;]]></displayCond>
+                            <config type="array">
+                                <type>select</type>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <autoSizeMax>1</autoSizeMax>
+                                <foreign_table>tx_podcast_domain_model_podcast</foreign_table>
+                                <foreign_table_where> AND tx_podcast_domain_model_podcast.deleted=0 AND tx_podcast_domain_model_podcast.sys_language_uid IN (-1,0)</foreign_table_where>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.singlePodcast>
+                    <settings.itemsperpage>
+                        <TCEforms>
+                            <label>Number of items per page</label>
+                            <config type="array">
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.itemsperpage>
 				</el>
 			</ROOT>
 		</sDEF>

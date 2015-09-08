@@ -8,20 +8,26 @@
 		<languageKey index="default" type="array">
 			<label index="tx_podcast_domain_model_podcast.categories">Categories</label>
 			<label index="tx_podcast_domain_model_podcast.links.feed">Podcast Feed</label>
-			<label index="tx_podcast_domain_model_podcast.links.back">« back</label>
+            <label index="tx_podcast_domain_model_podcast.links.back">« back</label>
+            <label index="tx_podcast_domain_model_episode.link_detail">> more details</label>
 			<label index="backend.wizard">Podcast</label>
 			<label index="backend.wizard.description"><![CDATA[
 				Displays Podcasts on the website and generates links to the XML feed.
 			]]></label>
+            <label index="pagination_previous"> &lt; </label>
+            <label index="pagination_next"> &gt; </label>
 		</languageKey> 
 		<languageKey index="de" type="array">
 			<label index="tx_podcast_domain_model_podcast.categories">Kategorien</label>
 			<label index="tx_podcast_domain_model_podcast.links.feed">Podcast Feed</label>
 			<label index="tx_podcast_domain_model_podcast.links.back">« zurück</label>
+            <label index="tx_podcast_domain_model_episode.link_detail">> mehr Informationen</label>
 			<label index="backend.wizard">Podcast</label>
 			<label index="backend.wizard.description"><![CDATA[
 				Zeigt Podcasts auf der Webseite an und erstellt Links zum XML Feed.
 			]]></label>
+            <label index="pagination_previous"> &lt; </label>
+            <label index="pagination_next"> &gt; </label>
 		</languageKey>
 	</data>
 </T3locallang>

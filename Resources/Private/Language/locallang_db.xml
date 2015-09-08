@@ -16,7 +16,7 @@
 			<label index="tx_podcast_domain_model_podcast.description">Description</label>
 			<label index="tx_podcast_domain_model_podcast.publication_date">Publication Date</label>
 			<label index="tx_podcast_domain_model_podcast.copyright">Copyright</label>
-			<label index="tx_podcast_domain_model_podcast.image">Image</label>
+            <label index="tx_podcast_domain_model_podcast.image">Image</label>
 			<label index="tx_podcast_domain_model_podcast.itunes">iTunes optimized</label>
 			<label index="tx_podcast_domain_model_podcast.itunesblock">Temporarily block this Podcast on iTunes</label>
 			<label index="tx_podcast_domain_model_podcast.explicit">Channel contains explicit content</label> 
@@ -44,7 +44,9 @@
 			<label index="tx_podcast_domain_model_episode.website">Website</label>
 			<label index="tx_podcast_domain_model_episode.author">Author</label>
 			<label index="tx_podcast_domain_model_episode.keywords">Keywords</label>
-			<label index="tx_podcast_domain_model_episode.image">Image</label>
+            <label index="tx_podcast_domain_model_episode.image">Teaser Image Video</label>
+            <label index="tx_podcast_domain_model_episode.teaserimage">Image</label>
+            <label index="tx_podcast_domain_model_episode.linkdetail">Link to episode detail page (external)</label>
 			
 			<label index="tx_podcast_domain_model_category">Category</label>
 			<label index="tx_podcast_domain_model_category.title">Title</label>
@@ -101,7 +103,9 @@
 			<label index="tx_podcast_domain_model_episode.duration">Dauer</label>
 			<label index="tx_podcast_domain_model_episode.website">Webseite</label>
 			<label index="tx_podcast_domain_model_episode.author">Author</label>
-			<label index="tx_podcast_domain_model_episode.image">Bild</label>
+			<label index="tx_podcast_domain_model_episode.image">Vorschaubild Video</label>
+            <label index="tx_podcast_domain_model_episode.teaserimage">Bild</label>
+            <label index="tx_podcast_domain_model_episode.linkdetail">Link zur Episoden Detailansicht</label>
 			
 			<label index="tx_podcast_domain_model_category">Kategorie</label>
 			<label index="tx_podcast_domain_model_category.title">Titel</label>

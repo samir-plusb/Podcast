@@ -4,12 +4,12 @@ if (!defined ('TYPO3_MODE'))	die ('Access denied.');
 $TCA['tx_podcast_domain_model_episode'] = array(
 	'ctrl' => $TCA['tx_podcast_domain_model_episode']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,description,file,image,publication_date,website,author,itunesblock,duration,mime,altfiles'
+		'showRecordFieldList' => 'title,subtitle,description,file,image,publication_date,website,author,itunesblock,duration,mime,altfiles,teaserimage,linkdetail'
 	),
 	'types' => array(
 		'1' => array('showitem' => '--div--;LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode,
 									title;;1;;1-1-1,subtitle,description,file;;2;;2,image,
-									--div--;LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.tab.meta,publication_date,website,author,keywords')
+									--div--;LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.tab.meta,publication_date,website,author,keywords,teaserimage,linkdetail')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => 'itunesblock'),
@@ -150,6 +150,45 @@ $TCA['tx_podcast_domain_model_episode'] = array(
 				'maxitems' => 1,
 			)
 		),
+        'teaserimage' => array(
+            'exclude' => 0,
+            'label'	  => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.teaserimage',
+            'config' => array (
+                'type' => 'group',
+                'internal_type' => 'file',
+                'allowed' => 'png,jpeg,jpg',
+                'max_size' => 4500,
+                'uploadfolder' => 'uploads/tx_podcast',
+                'show_thumbs' => 1,
+                'size' => 1,
+                'minitems' => 0,
+                'maxitems' => 1,
+            )
+        ),
+        'linkdetail' => array(
+            'exclude' => 0,
+            'label' => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.linkdetail',
+            'config' => array (
+                'type' => 'input',
+                'size' => '43',
+                'max' => '256',
+                'eval' => 'trim',
+                'wizards' => array(
+                    '_PADDING' => 10,
+                    'link' => array(
+                        'type' => 'popup',
+                        'title' => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.linkdetail',
+                        'icon' => 'link_popup.gif',
+                        'script' => 'browse_links.php?mode=wizard',
+                        'params' => array(
+                            'blindLinkOptions' => 'mail, spec, folder, file, page',
+                            'allowedExtensions' => 'mp3,m4a,mp4,pdf,mov,wmv',
+                        ),
+                        'JSopenParams' => 'height=500,width=600,status=0,menubar=0,scrollbars=1'
+                    )
+                )
+            )
+        ),
 		'publication_date' => array(
 			'exclude' => 0,
 			'label'	  => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.publication_date',

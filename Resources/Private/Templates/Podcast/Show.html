@@ -1,3 +1,5 @@
+{namespace m=PlusB\Podcast\ViewHelpers}
+
 <f:layout name="Default" />
 <f:section name="main">
 	<h2>{podcast.title}
@@ -55,11 +57,13 @@
 	<div class="episodes">                                                                                   
 		<f:if condition="{podcast.episodes}">
 			<f:then>
-				<f:for each="{podcast.episodes}" as="episode" reverse="false">
-					<f:cycle values="{1: 'odd' 2: 'even'}" as="zebraClass">
-						<f:render partial="Episode" arguments="{episode: episode, zebraClass: zebraClass}" />
-					</f:cycle>
-				</f:for>
+                <m:Paginate objects="{podcast.episodes}" as="ep" configuration="{itemsPerPage: settings.itemsperpage, insertAbove: 1, insertBelow: 1}">
+                    <f:for each="{ep}" as="episode" reverse="false">
+                        <f:cycle values="{1: 'odd' 2: 'even'}" as="zebraClass">
+                            <f:render partial="Episode" arguments="{episode: episode, zebraClass: zebraClass}" />
+                        </f:cycle>
+                    </f:for>
+                </m:Paginate>
 			</f:then>
 			<f:else>
 				<li><f:translate key="tx_podcast_domain_model_episode.none" /></li>
@@ -72,3 +76,5 @@
 	</p>
 	</f:if>
 </f:section>
+
+
