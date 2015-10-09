@@ -20,9 +20,9 @@
 .modPodcast .episode { padding: 1em 0 0; margin: 1em 0; overflow: hidden; zoom: 1;}  
 .modPodcast .episode h3 { overflow: hidden; zoom: 1; }    
 .modPodcast .episode h3 span { float: right; font-weight: normal; }
-.modPodcast .episode .description { margin-bottom: 20px; margin-left: 120px;}
-.modPodcast .episode .audio { margin-left: 120px;  }
-.modPodcast .episode .teaserimage { float: left; }
+.modPodcast .episode .description { margin-bottom: 20px; }
+.modPodcast .episode .audio { margin-left: 120px; margin-bottom: 10px;  }
+.modPodcast .episode .teaserimage { float: left; margin-right: 20px; }
 
 .modPodcast .episode h3 { font-size: 1.2em; font-weight: bold; margin: 0; }
                                          
@@ -30,6 +30,4 @@
 
 .modPodcast .feed { margin: 1em 0; }
 .modPodcast .back { font-weight: bold; margin-top: 2em; }
-
-.modPodcast .f3-widget-paginator li { padding: 0; background: white;}
-.modPodcast .f3-widget-paginator li.current { background:#003C69; color: white;}
+.modPodcast .f3-widget-paginator li { padding-left: 0;}
