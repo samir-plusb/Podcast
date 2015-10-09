@@ -21,7 +21,7 @@
 .modPodcast .episode h3 { overflow: hidden; zoom: 1; }    
 .modPodcast .episode h3 span { float: right; font-weight: normal; }
 .modPodcast .episode .description { margin-bottom: 20px; }
-.modPodcast .episode .audio { margin-left: 120px; margin-bottom: 10px;  }
+.modPodcast .episode .audio { margin-left: 125px; margin-bottom: 10px;  }
 .modPodcast .episode .teaserimage { float: left; margin-right: 20px; }
 
 .modPodcast .episode h3 { font-size: 1.2em; font-weight: bold; margin: 0; }
