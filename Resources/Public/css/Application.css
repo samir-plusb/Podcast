@@ -20,7 +20,7 @@
 .modPodcast .episode { padding: 1em 0 0; margin: 1em 0; overflow: hidden; zoom: 1;}  
 .modPodcast .episode h3 { overflow: hidden; zoom: 1; }    
 .modPodcast .episode h3 span { float: right; font-weight: normal; }
-.modPodcast .episode .description { margin-bottom: 20px; }
+.modPodcast .episode .description {  margin-left: 125px; margin-bottom: 20px; }
 .modPodcast .episode .audio { margin-left: 125px; margin-bottom: 10px;  }
 .modPodcast .episode .teaserimage { float: left; margin-right: 20px; }
 
