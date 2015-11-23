@@ -39,6 +39,7 @@
 			<label index="tx_podcast_domain_model_episode.file">File – upload in File module</label>
 			<label index="tx_podcast_domain_model_episode.publication_date">Publication Date</label>
 			<label index="tx_podcast_domain_model_episode.duration">Duration</label>
+			<label index="tx_podcast_domain_model_episode.videocode">Video Einbettung</label>
 			<label index="tx_podcast_domain_model_episode.mime">MIME Type</label>
 			<label index="tx_podcast_domain_model_episode.altfiles">Alternative Files</label>
 			<label index="tx_podcast_domain_model_episode.website">Website</label>
@@ -101,6 +102,7 @@
 			<label index="tx_podcast_domain_model_episode.file">Datei – über das Dateimodul hochladen</label>
 			<label index="tx_podcast_domain_model_episode.publication_date">Veröffentlichungsdatum</label>
 			<label index="tx_podcast_domain_model_episode.duration">Dauer</label>
+			<label index="tx_podcast_domain_model_episode.videocode">Video Einbettung</label>
 			<label index="tx_podcast_domain_model_episode.website">Webseite</label>
 			<label index="tx_podcast_domain_model_episode.author">Author</label>
 			<label index="tx_podcast_domain_model_episode.image">Vorschaubild Video</label>

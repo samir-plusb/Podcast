@@ -36,6 +36,13 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	 * @validate NotEmpty
 	 */
 	protected $title;
+
+	/**
+	 * VideoCode
+	 *
+	 * @var string
+	 */
+	protected $videocode;
 	
 	
 	/**
@@ -64,7 +71,6 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	 * File
 	 *
 	 * @var string
-	 * @validate NotEmpty
 	 */
 	protected $file;
 
@@ -179,6 +185,25 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	 */
 	public function setTitle($title) {
 		$this->title = $title;
+	}
+
+	/**
+	 * Returns the videocode
+	 *
+	 * @return string $videocode
+	 */
+	public function getVideocode() {
+		return $this->videocode;
+	}
+
+	/**
+	 * Sets the videocode
+	 *
+	 * @param string $videocode
+	 * @return void
+	 */
+	public function setVideocode($videocode) {
+		$this->videocode = $videocode;
 	}
 	
 	/**

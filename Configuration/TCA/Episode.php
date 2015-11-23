@@ -4,11 +4,11 @@ if (!defined ('TYPO3_MODE'))	die ('Access denied.');
 $TCA['tx_podcast_domain_model_episode'] = array(
 	'ctrl' => $TCA['tx_podcast_domain_model_episode']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,description,file,image,publication_date,website,author,itunesblock,duration,mime,altfiles,teaserimage,linkdetail'
+		'showRecordFieldList' => 'title,subtitle,description,file,image,videocode,publication_date,website,author,itunesblock,duration,mime,altfiles,teaserimage,linkdetail'
 	),
 	'types' => array(
 		'1' => array('showitem' => '--div--;LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode,
-									title;;1;;1-1-1,subtitle,description,file;;2;;2,image,
+									title;;1;;1-1-1,subtitle,description,file;;2;;2,image,videocode,
 									--div--;LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.tab.meta,publication_date,website,author,keywords,teaserimage,linkdetail')
 	),
 	'palettes' => array(
@@ -100,6 +100,17 @@ $TCA['tx_podcast_domain_model_episode'] = array(
 				'max' => '1000',
 			)
 		),
+		'videocode' => array(
+			'exclude' => 0,
+			'label'	  => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.videocode',
+			'config'  => array(
+				'type' => 'text',
+				'cols' => '45',
+				'rows' => '5',
+				'eval' => 'trim',
+				'max' => '3000',
+			)
+		),
 		'file' => array(
 			'exclude' => 0,
 			'label'	  => 'LLL:EXT:podcast/Resources/Private/Language/locallang_db.xml:tx_podcast_domain_model_episode.file',
@@ -118,7 +129,7 @@ $TCA['tx_podcast_domain_model_episode'] = array(
 				'type' => 'input',
 				'size' => '43',
 				'max' => '256',   
-				'eval' => 'trim,required',
+				'eval' => 'trim',
 				'wizards' => array(
 					'_PADDING' => 10, 
 					'link' => array(

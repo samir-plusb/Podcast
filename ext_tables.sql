@@ -64,6 +64,7 @@ CREATE TABLE tx_podcast_domain_model_episode (
 	title varchar(255) DEFAULT '' NOT NULL,
 	subtitle varchar(255) DEFAULT '' NOT NULL,
 	description text NOT NULL,
+	videocode text NOT NULL,
 	file varchar(255) DEFAULT '' NOT NULL,
 	image varchar(255) DEFAULT '' NOT NULL,
 	teaserimage varchar(255) DEFAULT '' NOT NULL,
