@@ -61,7 +61,7 @@
         </keywords> 
       </f:else>
     </f:if>
-    <enclosure url="{episode.fileurl}" length="{episode.filesize}" type="{episode.mime}" />
+    <pc:length file="{episode.fileurl}" fileId="{episode.file}" mime="{episode.mime}" />
     <guid>{episode.fileurl}</guid>
     <pubDate>
       <f:format.date date="{episode.publicationDate}" format="{settings.episode.publicationDate}" />

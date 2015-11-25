@@ -74,6 +74,13 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	 */
 	protected $file;
 
+	/**
+	 * Filesize
+	 *
+	 * @var string
+	 */
+	protected $filesize;
+
     /**
      * Image
      *
@@ -597,12 +604,22 @@ class Tx_Podcast_Domain_Model_Episode extends Tx_Extbase_DomainObject_AbstractEn
 	public function setKeywords(Tx_Extbase_Persistence_ObjectStorage $keywords) {
 		$this->keywords = $keywords;
 	}
-        
-        public function getFilesize(){
-          if(is_file($this->file)){
-            return filesize($this->file); 
-          }
-          return 0;
-        }
+
+	/**
+	 * Sets the filesize
+	 *
+	 * @param string $filesize
+	 */
+	public function setFilesize($filesize){
+		$this->filesize = $filesize;
+	}
+
+	/**
+	*   Gets the filesize
+	*
+	* @return string filesize
+	*/
+	public function getFilesize(){
+	  return $this->filesize;
+	}
 }
-?>
