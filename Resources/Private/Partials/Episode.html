@@ -1,3 +1,5 @@
+{namespace vhs=FluidTYPO3\Vhs\ViewHelpers}
+
 <div class="episode {zebraClass}">
     <f:if condition="{episode.videocode}">
         <f:then>
@@ -6,7 +8,7 @@
             <f:if condition="{episode.teaserimage}">
                 <f:then>
                     <div class="teaserimage">
-                        <f:image src="uploads/tx_podcast/{episode.teaserimage}" alt="episode.title" width="150c" height="150c" />
+                        <f:image src="uploads/tx_podcast/{episode.teaserimage}" alt="{episode.title}" width="150c" height="150c" />
                     </div>
                 </f:then>
                 <f:else>
@@ -38,7 +40,7 @@
             <f:if condition="{episode.linkdetail}">
                 <f:then>
                     <div class="linkdetail">
-                        <f:link.external uri="{episode.linkdetail}" target="_self"><f:translate key="tx_podcast_domain_model_episode.link_detail"/></f:link.external>
+                        <vhs:link.typolink configuration="{parameter: episode.linkdetail}"><f:translate key="tx_podcast_domain_model_episode.link_detail"/></vhs:link.typolink>
                     </div>
                 </f:then>
             </f:if>
