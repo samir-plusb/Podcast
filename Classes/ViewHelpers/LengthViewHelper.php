@@ -23,7 +23,7 @@ namespace PlusB\Podcast\ViewHelpers;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
- * Calculates Episode
+ *
  *
  *
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
@@ -32,7 +32,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 class LengthViewHelper extends AbstractViewHelper {
 
 	/**
-	 * Iterates through elements of $each and renders child nodes
+	 * Returns filesize of file, url and type
 	 *
 	 * @param string $file
 	 * @param string $fileId
@@ -40,7 +40,7 @@ class LengthViewHelper extends AbstractViewHelper {
 	 * @return string
 	 */
 	public function render($file, $fileId, $mime) {
-		return '<enclosure url="'.$file.'" length="'.filesize(str_replace('typo3conf/ext/podcast/Classes/ViewHelpers','',dirname(__FILE__)).$fileId).'" type="'.$mime.'" />';
+		return '<enclosure url="'.$file.'" length="'.filesize(PATH_site.$fileId).'" type="'.$mime.'" />';
 	} 
 
 }
